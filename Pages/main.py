@@ -40,17 +40,6 @@ st.markdown(
 )
 
 
-# Conteúdo do footer em HTML
-footer_html = """
-    <footer style="text-align: center; margin-top: 50px;">
-        <p>© Lucio Flavio Santgos</p>
-    </footer>
-"""
-
-# Renderizar o HTML usando st.markdown
-st.markdown(footer_html, unsafe_allow_html=True)
-
-
 with open("css/styles.css") as f:
   st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
@@ -62,3 +51,14 @@ if paginas == 'Mega Sena':
     jogo()
 if paginas == 'Curiosidades':
     conteudo()
+
+
+# Conteúdo do footer em HTML
+footer_html = """
+    <footer style="text-align: center; margin-top: 50px;">
+        <p>© Lucio Flavio Santos</p>
+    </footer>
+"""
+
+# Renderizar o HTML usando st.markdown
+st.markdown(footer_html, unsafe_allow_html=True)
