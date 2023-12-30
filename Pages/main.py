@@ -1,14 +1,52 @@
 import streamlit as st
-from home import home
+from conteudo import conteudo
+from mega_sena import jogo
 
+# Configuração do layout
+st.set_page_config(
+    page_title="Ex-stream-ly Cool App",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
 
-st.title("Mega Sena - Loteria")
-st.markdown("""Este aplicativo não é uma garantia de que você ganhará no jogo.  
-            Com este aviso eu me insento de qualquer eventual perda sua física ou financeira.  
-            Este aplicativo é uma forma divertida e simplificada para os amantes de jogos,  
-            se você não sabe quais dezenas jogar, este gerador de dezenas é uma boa escolha.  
-            """)
+# Adiciona um estilo personalizado usando CSS embutido
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #87CEEB; /* Azul céu */
+        }
+        .main {
+            background-color: #87CEEB; /* Fundo para o conteúdo principal */
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+           .corner-buttons {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: row-reverse;
+        }
 
-pg_home = st.sidebar.button("Home")
-if pg_home:
-    home()
+        .corner-buttons button {
+            margin-left: 10px;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+with open("css/styles.css") as f:
+  st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+# Barra de menu
+
+paginas = st.sidebar.selectbox("Escolha uma página", ("Mega Sena", "Curiosidades"))
+# Lógica para mostrar diferentes conteúdos com base nos botões clicados
+if paginas == 'Mega Sena':
+    jogo()
+if paginas == 'Curiosidades':
+    conteudo()
