@@ -16,10 +16,6 @@ st.markdown(
     <style>
         body {
             background-color: #87CEEB; /* Azul céu */
-
-            <footer style="text-align: center; margin-top: 50px;">
-                <p>© Lucio Flavio Santos.</p>
-            </footer>
         }
         .main {
             background-color: #87CEEB; /* Fundo para o conteúdo principal */
@@ -47,7 +43,7 @@ st.markdown(
 # Conteúdo do footer em HTML
 footer_html = """
     <footer style="text-align: center; margin-top: 50px;">
-        <p>© Seu Nome.</p>
+        <p>© Lucio Flavio Santgos</p>
     </footer>
 """
 
