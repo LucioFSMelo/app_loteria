@@ -16,6 +16,10 @@ st.markdown(
     <style>
         body {
             background-color: #87CEEB; /* Azul céu */
+
+            <footer style="text-align: center; margin-top: 50px;">
+                <p>© Lucio Flavio Santos.</p>
+            </footer>
         }
         .main {
             background-color: #87CEEB; /* Fundo para o conteúdo principal */
@@ -38,6 +42,18 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
+
+
+# Conteúdo do footer em HTML
+footer_html = """
+    <footer style="text-align: center; margin-top: 50px;">
+        <p>© Seu Nome.</p>
+    </footer>
+"""
+
+# Renderizar o HTML usando st.markdown
+st.markdown(footer_html, unsafe_allow_html=True)
+
 
 with open("css/styles.css") as f:
   st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)

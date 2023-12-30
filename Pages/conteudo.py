@@ -22,8 +22,8 @@ def conteudo():
     
     st.title("Combinação Simples")
     st.subheader("""Usando a combinação simples, um dos métodos da análise combinatória para resolução de problemas, podemos  \
-                 encontar a quantidade total de combinações da Mega Sena e saber quantas combinações podemos ter um um bilhete  \
-                 de jogo seguido as regras da loteria, onde um jogo pode ter de 6 a 20 números em um único bilhete e com isso o  \
+                 encontar a quantidade total de combinações da Mega Sena e saber quantas combinações podemos ter em um bilhete  \
+                 do jogo. Seguido as regras da loteria, onde um jogo pode ter de 6 a 20 números em um único bilhete e com isso o  \
                  valor desse jogo dependerá da quantidade de combinações dos números marcados.""")
     
 
